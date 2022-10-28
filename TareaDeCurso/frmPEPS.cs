@@ -98,6 +98,10 @@ namespace pjContabilidadMetodosValuacion
 
                         }
                     }
+                    else if(Entrada.First().UnidadesCompradas < Salida.Last().UnidadesUtilizadas)
+                    {
+
+                    }
                 }
             }
             else
