@@ -155,5 +155,10 @@ namespace pjContabilidadMetodosValuacion
                 lvUnidadesUtilizadas.Items.Add(info);
             }
         }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

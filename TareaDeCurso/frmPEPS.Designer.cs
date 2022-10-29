@@ -53,8 +53,9 @@
             this.lvUnidadesUtilizadas = new System.Windows.Forms.ListView();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -155,7 +156,7 @@
             this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.calculadora__1_;
             this.pictureBox1.Location = new System.Drawing.Point(176, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(117, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -308,6 +309,10 @@
             this.columnHeader5.Text = "Unidades Utilizadas";
             this.columnHeader5.Width = 120;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "C/U";
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
@@ -315,14 +320,22 @@
             this.groupBox4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox4.Location = new System.Drawing.Point(765, 398);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(250, 119);
+            this.groupBox4.Size = new System.Drawing.Size(250, 162);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Resultados";
             // 
-            // columnHeader6
+            // btnFinalizar
             // 
-            this.columnHeader6.Text = "C/U";
+            this.btnFinalizar.AutoSize = true;
+            this.btnFinalizar.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFinalizar.Location = new System.Drawing.Point(867, 566);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(131, 29);
+            this.btnFinalizar.TabIndex = 15;
+            this.btnFinalizar.Text = "Finalizar periodo";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // frmPEPS
             // 
@@ -330,6 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.pepss;
             this.ClientSize = new System.Drawing.Size(1070, 637);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -380,5 +394,6 @@
         private ColumnHeader columnHeader5;
         private GroupBox groupBox4;
         private ColumnHeader columnHeader6;
+        private Button btnFinalizar;
     }
 }
