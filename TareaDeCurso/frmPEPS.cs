@@ -36,13 +36,7 @@ namespace pjContabilidadMetodosValuacion
                 suma += int.Parse(txtUnidades.Text);
                 Entrada.Sort();
                 lvUnidadesCompradas.Items.Clear();
-                foreach (MatEntradaSalida elemento in Entrada)
-                {
-                    ListViewItem compradas = new ListViewItem(elemento.Fecha.ToShortDateString());
-                    compradas.SubItems.Add(elemento.UnidadesCompradas.ToString());
-                    compradas.SubItems.Add(elemento.CostoUnitario.ToString("0.00"));
-                    lvUnidadesCompradas.Items.Add(compradas);
-                }
+                ActualizarTablaEntrada();
             }
             catch (FormatException)
             {
@@ -65,40 +59,58 @@ namespace pjContabilidadMetodosValuacion
             {
                 MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            Salida.Sort();
+
             //Incompleto
             if (suma >= Salida.Last().UnidadesUtilizadas)
             {
-                for (int i = 100; i != 0; i--)
+                for (int i = 100; i != 0; i++)
                 {
-                    if (Entrada.First().UnidadesCompradas > Salida.Last().UnidadesUtilizadas)
+                    if (Entrada.First().UnidadesCompradas > utilizadas)
                     {
-                        Entrada.First().UnidadesCompradas -= Salida.Last().UnidadesUtilizadas;
-                        suma -= Salida.Last().UnidadesUtilizadas;
+                        Entrada.First().UnidadesCompradas -= utilizadas;
+                        suma -= utilizadas;
                         Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
-                        i = 1;
+                        utilizadas = 0;
+                        i = -1;
                     }
                     else if (Entrada.First().UnidadesCompradas <= Salida.Last().UnidadesUtilizadas)
                     {
-                        for (int j = utilizadas; j != 0; j--)
+                        for (int j = 100; j != 0; j++)
                         {
-                            if (utilizadas == 0)
+                            if (j == 101)
                             {
-                                j = 1;
-                                i = 1;
+                                Salida.Add(new MatEntradaSalida(Salida.Last().Fecha, utilizadas));
+                            }
+                            if (utilizadas <= 0)
+                            {
+                                j = -1;
+                                i = -1;
                             }
                             else
                             {
-                                Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
-                                utilizadas -= Entrada.First().UnidadesCompradas;
-                                suma -= Entrada.First().UnidadesCompradas;
-                                Entrada.RemoveAt(0);
+                                if (utilizadas < Entrada.First().UnidadesCompradas)
+                                {
+                                    Entrada.First().UnidadesCompradas -= utilizadas;
+                                    suma -= utilizadas;
+                                    Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
+                                    utilizadas = 0;
+                                }
+                                else
+                                {
+                                    Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
+                                    utilizadas -= Entrada.First().UnidadesCompradas;
+                                    Salida.Last().UnidadesUtilizadas -= utilizadas;
+                                    suma -= Entrada.First().UnidadesCompradas;
+                                    Entrada.RemoveAt(0);
+                                    ActualizarTablaSalida();
+                                }
+
                             }
 
 
                         }
                     }
-                    else if(Entrada.First().UnidadesCompradas < Salida.Last().UnidadesUtilizadas)
+                    else if (Entrada.First().UnidadesCompradas < Salida.Last().UnidadesUtilizadas)
                     {
 
                     }
@@ -110,13 +122,9 @@ namespace pjContabilidadMetodosValuacion
             {
                 Salida.Sort();
                 lvUnidadesUtilizadas.Items.Clear();
-                foreach (MatEntradaSalida elemento in Salida)
-                {
-                    ListViewItem info = new ListViewItem(elemento.Fecha.ToShortDateString());
-                    info.SubItems.Add(elemento.UnidadesUtilizadas.ToString());
-                    info.SubItems.Add(elemento.CostoUnitario.ToString("0.00"));
-                    lvUnidadesUtilizadas.Items.Add(info);
-                }
+                ActualizarTablaSalida();
+                ActualizarTablaEntrada();
+
             }
             catch (FormatException)
             {
@@ -124,6 +132,28 @@ namespace pjContabilidadMetodosValuacion
             }
             dtFechaUtilizadas.ResetText();
             txtUnidadesUtilizadas.Clear();
+        }
+
+        public void ActualizarTablaEntrada()
+        {
+            lvUnidadesCompradas.Items.Clear();
+            foreach (MatEntradaSalida elemento in Entrada)
+            {
+                ListViewItem compradas = new ListViewItem(elemento.Fecha.ToShortDateString());
+                compradas.SubItems.Add(elemento.UnidadesCompradas.ToString());
+                compradas.SubItems.Add(elemento.CostoUnitario.ToString("0.00"));
+                lvUnidadesCompradas.Items.Add(compradas);
+            }
+        }
+        public void ActualizarTablaSalida()
+        {
+            foreach (MatEntradaSalida elemento in Salida)
+            {
+                ListViewItem info = new ListViewItem(elemento.Fecha.ToShortDateString());
+                info.SubItems.Add(elemento.UnidadesUtilizadas.ToString());
+                info.SubItems.Add(elemento.CostoUnitario.ToString("0.00"));
+                lvUnidadesUtilizadas.Items.Add(info);
+            }
         }
     }
 }

@@ -56,7 +56,7 @@ namespace Clases
         public int CompareTo(MatEntradaSalida? elemento)
         {
             DateTime fechaobj = this.fecha;
-            DateTime fechaElemento = elemento.fecha;
+            DateTime     fechaElemento = elemento.fecha;
 
             if (fechaobj > fechaElemento)
                 return 1;
