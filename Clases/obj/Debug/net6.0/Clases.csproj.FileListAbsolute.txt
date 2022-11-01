@@ -37,3 +37,15 @@ C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCurso\Clases\obj\Debug\
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCurso\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCurso\Clases\obj\Debug\net6.0\ref\Clases.dll
 >>>>>>> 660576961985fb514e2b90e41146a53c6b1ab753
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\bin\Debug\net6.0\Clases.deps.json
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\bin\Debug\net6.0\Clases.dll
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\bin\Debug\net6.0\Clases.pdb
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.csproj.AssemblyReference.cache
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.AssemblyInfoInputs.cache
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.AssemblyInfo.cs
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.csproj.CoreCompileInputs.cache
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.dll
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\refint\Clases.dll
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\Clases.pdb
+C:\Users\JADPA-25\Desktop\TareaCurso\Clases\obj\Debug\net6.0\ref\Clases.dll

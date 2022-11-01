@@ -52,7 +52,7 @@ namespace pjContabilidadMetodosValuacion
             int utilizadas = 0;
             try
             {
-                Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), int.Parse(txtUnidadesUtilizadas.Text)));
+                //Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), int.Parse(txtUnidadesUtilizadas.Text)));
                 utilizadas = int.Parse(txtUnidadesUtilizadas.Text);
             }
             catch (FormatException)
@@ -61,58 +61,47 @@ namespace pjContabilidadMetodosValuacion
             }
 
             //Incompleto
-            if (suma >= Salida.Last().UnidadesUtilizadas)
+            if (suma >= utilizadas)
             {
                 for (int i = 100; i != 0; i++)
                 {
+                    
                     if (Entrada.First().UnidadesCompradas > utilizadas)
                     {
+                        Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), utilizadas));
                         Entrada.First().UnidadesCompradas -= utilizadas;
                         suma -= utilizadas;
                         Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
                         utilizadas = 0;
                         i = -1;
                     }
-                    else if (Entrada.First().UnidadesCompradas <= Salida.Last().UnidadesUtilizadas)
+                    else if (Entrada.First().UnidadesCompradas <= utilizadas)
                     {
                         for (int j = 100; j != 0; j++)
                         {
-                            if (j == 101)
+                            Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), utilizadas));
+                            if (utilizadas < Entrada.First().UnidadesCompradas)
                             {
-                                Salida.Add(new MatEntradaSalida(Salida.Last().Fecha, utilizadas));
-                            }
-                            if (utilizadas <= 0)
-                            {
-                                j = -1;
-                                i = -1;
+                                Entrada.First().UnidadesCompradas -= utilizadas;
+                                suma -= utilizadas;
+                                Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
+                                utilizadas = 0;
                             }
                             else
                             {
-                                if (utilizadas < Entrada.First().UnidadesCompradas)
-                                {
-                                    Entrada.First().UnidadesCompradas -= utilizadas;
-                                    suma -= utilizadas;
-                                    Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
-                                    utilizadas = 0;
-                                }
-                                else
-                                {
-                                    Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
-                                    utilizadas -= Entrada.First().UnidadesCompradas;
-                                    Salida.Last().UnidadesUtilizadas -= utilizadas;
-                                    suma -= Entrada.First().UnidadesCompradas;
-                                    Entrada.RemoveAt(0);
-                                    ActualizarTablaSalida();
-                                }
-
+                                Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
+                                utilizadas -= Entrada.First().UnidadesCompradas;
+                                Salida.Last().UnidadesUtilizadas -= utilizadas;
+                                suma -= Salida.Last().UnidadesUtilizadas;
+                                Entrada.RemoveAt(0);
                             }
 
-
+                            if(utilizadas == 0)
+                            {
+                                i = -1;
+                                j = -1;
+                            }
                         }
-                    }
-                    else if (Entrada.First().UnidadesCompradas < Salida.Last().UnidadesUtilizadas)
-                    {
-
                     }
                 }
             }
