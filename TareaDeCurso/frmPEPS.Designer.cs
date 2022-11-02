@@ -351,6 +351,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPEPS";
             this.Text = "frmPEPS";
             this.Load += new System.EventHandler(this.frmPEPS_Load);

@@ -70,5 +70,15 @@
             }
 
         }
+
+        private void btnSiguiente_MouseEnter(object sender, EventArgs e)
+        {
+            btnSiguiente.BackColor = Color.Red;
+        }
+
+        private void btnSiguiente_MouseLeave(object sender, EventArgs e)
+        {
+            btnSiguiente.BackColor = Color.White;
+        }
     }
 }

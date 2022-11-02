@@ -204,6 +204,7 @@
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.White;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSiguiente.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.next;
             this.btnSiguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,6 +216,8 @@
             this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            this.btnSiguiente.MouseEnter += new System.EventHandler(this.btnSiguiente_MouseEnter);
+            this.btnSiguiente.MouseLeave += new System.EventHandler(this.btnSiguiente_MouseLeave);
             // 
             // frmPrincipal
             // 
