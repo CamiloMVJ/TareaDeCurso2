@@ -30,21 +30,53 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnRegistrarCompras_Click(object sender, EventArgs e)
         {
+            bool confirmacion = true;
             try
             {
-                Entrada.Add(new MatEntradaSalida(dtFechaCompras.Value, int.Parse(txtUnidades.Text), double.Parse(txtCosto.Text)));
-                suma += int.Parse(txtUnidades.Text);
-                Entrada.Sort();
-                lvUnidadesCompradas.Items.Clear();
-                ActualizarTablaEntrada();
+                if (int.Parse(txtUnidades.Text) > 0 && double.Parse(txtCosto.Text) > 0)
+                {
+                    try
+                    {
+                        for (int i = 0; i < Entrada.Count; i++)
+                        {
+                            if (Entrada[i].Fecha.ToShortDateString() == dtFechaCompras.Value.ToShortDateString() && Entrada[i].CostoUnitario == double.Parse(txtCosto.Text))
+                            {
+                                Entrada[i].UnidadesCompradas += int.Parse(txtUnidades.Text);
+                                suma += int.Parse(txtUnidades.Text);
+                                Entrada.Sort();
+                                confirmacion = false;
+                                ActualizarTablaEntrada();
+                            }
+                        }
+                        if (confirmacion)
+                        {
+                            Entrada.Add(new MatEntradaSalida(dtFechaCompras.Value, int.Parse(txtUnidades.Text), double.Parse(txtCosto.Text)));
+                            suma += int.Parse(txtUnidades.Text);
+                            Entrada.Sort();
+                            ActualizarTablaEntrada();
+                        }
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Rellene las casillas requeridas", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+
+                }
+                dtFechaCompras.ResetText();
+                txtUnidades.Clear();
+                txtCosto.Clear();
             }
             catch (FormatException)
             {
-                MessageBox.Show("Rellene las casillas requeridas", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
-            dtFechaCompras.ResetText();
-            txtUnidades.Clear();
-            txtCosto.Clear();
         }
 
         private void btnRegistrarUtilizadas_Click(object sender, EventArgs e)
@@ -52,75 +84,86 @@ namespace pjContabilidadMetodosValuacion
             int utilizadas = 0;
             try
             {
-                //Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), int.Parse(txtUnidadesUtilizadas.Text)));
                 utilizadas = int.Parse(txtUnidadesUtilizadas.Text);
             }
             catch (FormatException)
             {
                 MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
-
-            //Incompleto
-            if (suma >= utilizadas)
+            if (utilizadas <= 0)
             {
-                for (int i = 100; i != 0; i++)
+                MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                if (suma >= utilizadas)
                 {
-                    
-                    if (Entrada.First().UnidadesCompradas > utilizadas)
+                    for (int i = 100; i != 0; i++)
                     {
-                        Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), utilizadas));
-                        Entrada.First().UnidadesCompradas -= utilizadas;
-                        suma -= utilizadas;
-                        Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
-                        utilizadas = 0;
-                        i = -1;
-                    }
-                    else if (Entrada.First().UnidadesCompradas <= utilizadas)
-                    {
-                        for (int j = 100; j != 0; j++)
+                        if (Entrada.Count > 0)
                         {
-                            Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), utilizadas));
-                            if (utilizadas < Entrada.First().UnidadesCompradas)
+                            if (Entrada.First().UnidadesCompradas > utilizadas)
                             {
+                                Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), utilizadas));
                                 Entrada.First().UnidadesCompradas -= utilizadas;
                                 suma -= utilizadas;
                                 Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
                                 utilizadas = 0;
-                            }
-                            else
-                            {
-                                Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
-                                utilizadas -= Entrada.First().UnidadesCompradas;
-                                Salida.Last().UnidadesUtilizadas -= utilizadas;
-                                suma -= Salida.Last().UnidadesUtilizadas;
-                                Entrada.RemoveAt(0);
-                            }
-
-                            if(utilizadas == 0)
-                            {
                                 i = -1;
-                                j = -1;
+                            }
+                            else if (Entrada.First().UnidadesCompradas <= utilizadas)
+                            {
+                                for (int j = 100; j != 0; j++)
+                                {
+                                    Salida.Add(new MatEntradaSalida(DateTime.Parse(dtFechaUtilizadas.Text), utilizadas));
+                                    if (utilizadas < Entrada.First().UnidadesCompradas)
+                                    {
+                                        Entrada.First().UnidadesCompradas -= utilizadas;
+                                        suma -= utilizadas;
+                                        Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
+                                        utilizadas = 0;
+                                    }
+                                    else
+                                    {
+                                        Salida.Last().CostoUnitario = Entrada.First().CostoUnitario;
+                                        utilizadas -= Entrada.First().UnidadesCompradas;
+                                        Salida.Last().UnidadesUtilizadas -= utilizadas;
+                                        suma -= Salida.Last().UnidadesUtilizadas;
+                                        Entrada.RemoveAt(0);
+                                    }
+
+                                    if (utilizadas == 0)
+                                    {
+                                        i = -1;
+                                        j = -1;
+                                    }
+                                }
                             }
                         }
+                        else
+                        {
+                            MessageBox.Show("No cuenta con las unidades requeridas, solo tiene: " + suma, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
                     }
                 }
-            }
-            else
-                MessageBox.Show("No cuenta con las unidades requeridas, solo tiene: " + suma, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            try
-            {
+                else
+                {
+                    MessageBox.Show("No cuenta con las unidades requeridas, solo tiene: " + suma, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 Salida.Sort();
                 lvUnidadesUtilizadas.Items.Clear();
                 ActualizarTablaSalida();
                 ActualizarTablaEntrada();
+                dtFechaUtilizadas.ResetText();
+                txtUnidadesUtilizadas.Clear();
+            }
+            //Incompleto
 
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Rellene las casilla requeridas", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            dtFechaUtilizadas.ResetText();
-            txtUnidadesUtilizadas.Clear();
         }
 
         public void ActualizarTablaEntrada()
