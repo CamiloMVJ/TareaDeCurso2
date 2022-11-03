@@ -29,237 +29,254 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAltoBajo = new System.Windows.Forms.Button();
+            this.btnEstadistico = new System.Windows.Forms.Button();
+            this.btnSimple = new System.Windows.Forms.Button();
+            this.btnEspecifica = new System.Windows.Forms.Button();
+            this.btnPEPS = new System.Windows.Forms.Button();
+            this.btnPonderado = new System.Windows.Forms.Button();
+            this.btnUEPS = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gbMetodosSegmentacion = new System.Windows.Forms.GroupBox();
-            this.rbEstadistico = new System.Windows.Forms.RadioButton();
-            this.rbPuntoAltoBajo = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gbMetodosValuacion = new System.Windows.Forms.GroupBox();
-            this.rbIdentificacionEspecifica = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rbUEPS = new System.Windows.Forms.RadioButton();
-            this.rbPEPS = new System.Windows.Forms.RadioButton();
-            this.rbPromedioPonderado = new System.Windows.Forms.RadioButton();
-            this.rbPromedioSimple = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSiguiente = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbMetodosSegmentacion.SuspendLayout();
-            this.gbMetodosValuacion.SuspendLayout();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // btnAltoBajo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(183, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnAltoBajo.AutoSize = true;
+            this.btnAltoBajo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAltoBajo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAltoBajo.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAltoBajo.ForeColor = System.Drawing.Color.White;
+            this.btnAltoBajo.Location = new System.Drawing.Point(652, 448);
+            this.btnAltoBajo.Name = "btnAltoBajo";
+            this.btnAltoBajo.Size = new System.Drawing.Size(213, 38);
+            this.btnAltoBajo.TabIndex = 5;
+            this.btnAltoBajo.Text = "Punto alto, Punto bajo";
+            this.btnAltoBajo.UseVisualStyleBackColor = false;
+            this.btnAltoBajo.Click += new System.EventHandler(this.btnAltoBajo_Click);
+            this.btnAltoBajo.MouseEnter += new System.EventHandler(this.btnAltoBajo_MouseEnter);
+            this.btnAltoBajo.MouseLeave += new System.EventHandler(this.btnAltoBajo_MouseLeave);
+            // 
+            // btnEstadistico
+            // 
+            this.btnEstadistico.AutoSize = true;
+            this.btnEstadistico.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEstadistico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEstadistico.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEstadistico.ForeColor = System.Drawing.Color.White;
+            this.btnEstadistico.Location = new System.Drawing.Point(652, 503);
+            this.btnEstadistico.Name = "btnEstadistico";
+            this.btnEstadistico.Size = new System.Drawing.Size(213, 38);
+            this.btnEstadistico.TabIndex = 6;
+            this.btnEstadistico.Text = "Estadistico";
+            this.btnEstadistico.UseVisualStyleBackColor = false;
+            this.btnEstadistico.Click += new System.EventHandler(this.btnEstadistico_Click);
+            this.btnEstadistico.MouseEnter += new System.EventHandler(this.btnEstadistico_MouseEnter);
+            this.btnEstadistico.MouseLeave += new System.EventHandler(this.btnEstadistico_MouseLeave);
+            // 
+            // btnSimple
+            // 
+            this.btnSimple.AutoSize = true;
+            this.btnSimple.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSimple.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSimple.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSimple.ForeColor = System.Drawing.Color.White;
+            this.btnSimple.Location = new System.Drawing.Point(652, 221);
+            this.btnSimple.Name = "btnSimple";
+            this.btnSimple.Size = new System.Drawing.Size(213, 38);
+            this.btnSimple.TabIndex = 8;
+            this.btnSimple.Text = "Costo Promedio Simple";
+            this.btnSimple.UseVisualStyleBackColor = false;
+            this.btnSimple.Click += new System.EventHandler(this.btnSimple_Click);
+            this.btnSimple.MouseEnter += new System.EventHandler(this.btnSimple_MouseEnter);
+            this.btnSimple.MouseLeave += new System.EventHandler(this.btnSimple_MouseLeave);
+            // 
+            // btnEspecifica
+            // 
+            this.btnEspecifica.AutoSize = true;
+            this.btnEspecifica.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEspecifica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEspecifica.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEspecifica.ForeColor = System.Drawing.Color.White;
+            this.btnEspecifica.Location = new System.Drawing.Point(652, 119);
+            this.btnEspecifica.Name = "btnEspecifica";
+            this.btnEspecifica.Size = new System.Drawing.Size(213, 38);
+            this.btnEspecifica.TabIndex = 7;
+            this.btnEspecifica.Text = "Identificacion Especifica";
+            this.btnEspecifica.UseVisualStyleBackColor = false;
+            this.btnEspecifica.Click += new System.EventHandler(this.btnEspecifica_Click);
+            this.btnEspecifica.MouseEnter += new System.EventHandler(this.btnEspecifica_MouseEnter);
+            this.btnEspecifica.MouseLeave += new System.EventHandler(this.btnEspecifica_MouseLeave);
+            // 
+            // btnPEPS
+            // 
+            this.btnPEPS.AutoSize = true;
+            this.btnPEPS.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPEPS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPEPS.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPEPS.ForeColor = System.Drawing.Color.White;
+            this.btnPEPS.Location = new System.Drawing.Point(652, 327);
+            this.btnPEPS.Name = "btnPEPS";
+            this.btnPEPS.Size = new System.Drawing.Size(213, 38);
+            this.btnPEPS.TabIndex = 10;
+            this.btnPEPS.Text = "PEPS";
+            this.btnPEPS.UseVisualStyleBackColor = false;
+            this.btnPEPS.Click += new System.EventHandler(this.btnPEPS_Click);
+            this.btnPEPS.MouseEnter += new System.EventHandler(this.btnPEPS_MouseEnter);
+            this.btnPEPS.MouseLeave += new System.EventHandler(this.btnPEPS_MouseLeave);
+            // 
+            // btnPonderado
+            // 
+            this.btnPonderado.AutoSize = true;
+            this.btnPonderado.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPonderado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPonderado.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPonderado.ForeColor = System.Drawing.Color.White;
+            this.btnPonderado.Location = new System.Drawing.Point(652, 170);
+            this.btnPonderado.Name = "btnPonderado";
+            this.btnPonderado.Size = new System.Drawing.Size(213, 38);
+            this.btnPonderado.TabIndex = 9;
+            this.btnPonderado.Text = "Costo Promedio Ponderado";
+            this.btnPonderado.UseVisualStyleBackColor = false;
+            this.btnPonderado.Click += new System.EventHandler(this.btnPonderado_Click);
+            this.btnPonderado.MouseEnter += new System.EventHandler(this.btnPonderado_MouseEnter);
+            this.btnPonderado.MouseLeave += new System.EventHandler(this.btnPonderado_MouseLeave);
+            // 
+            // btnUEPS
+            // 
+            this.btnUEPS.AutoSize = true;
+            this.btnUEPS.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnUEPS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUEPS.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUEPS.ForeColor = System.Drawing.Color.White;
+            this.btnUEPS.Location = new System.Drawing.Point(652, 274);
+            this.btnUEPS.Name = "btnUEPS";
+            this.btnUEPS.Size = new System.Drawing.Size(213, 38);
+            this.btnUEPS.TabIndex = 11;
+            this.btnUEPS.Text = "UEPS";
+            this.btnUEPS.UseVisualStyleBackColor = false;
+            this.btnUEPS.Click += new System.EventHandler(this.btnUEPS_Click);
+            this.btnUEPS.MouseEnter += new System.EventHandler(this.btnUEPS_MouseEnter);
+            this.btnUEPS.MouseLeave += new System.EventHandler(this.btnUEPS_MouseLeave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(164, 76);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(186, 164);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Candara", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(194, 261);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 37);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Metodos";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(204, 298);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 29);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Valuación";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(184, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 29);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Segmentacion";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(273, 29);
+            this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label1.Location = new System.Drawing.Point(641, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 44);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Métodos de Valuación y Segmentación";
+            this.label1.Size = new System.Drawing.Size(239, 29);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Metodos de Valuación";
             // 
-            // gbMetodosSegmentacion
+            // label8
             // 
-            this.gbMetodosSegmentacion.BackColor = System.Drawing.Color.Transparent;
-            this.gbMetodosSegmentacion.Controls.Add(this.rbEstadistico);
-            this.gbMetodosSegmentacion.Controls.Add(this.rbPuntoAltoBajo);
-            this.gbMetodosSegmentacion.Controls.Add(this.label2);
-            this.gbMetodosSegmentacion.Font = new System.Drawing.Font("Sitka Heading", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.gbMetodosSegmentacion.Location = new System.Drawing.Point(31, 113);
-            this.gbMetodosSegmentacion.Name = "gbMetodosSegmentacion";
-            this.gbMetodosSegmentacion.Size = new System.Drawing.Size(375, 233);
-            this.gbMetodosSegmentacion.TabIndex = 2;
-            this.gbMetodosSegmentacion.TabStop = false;
-            this.gbMetodosSegmentacion.Text = "Métodos de Segmentación";
-            // 
-            // rbEstadistico
-            // 
-            this.rbEstadistico.AutoSize = true;
-            this.rbEstadistico.Location = new System.Drawing.Point(127, 96);
-            this.rbEstadistico.Name = "rbEstadistico";
-            this.rbEstadistico.Size = new System.Drawing.Size(106, 27);
-            this.rbEstadistico.TabIndex = 2;
-            this.rbEstadistico.Text = "Estadístico";
-            this.rbEstadistico.UseVisualStyleBackColor = true;
-            // 
-            // rbPuntoAltoBajo
-            // 
-            this.rbPuntoAltoBajo.AutoSize = true;
-            this.rbPuntoAltoBajo.Location = new System.Drawing.Point(125, 42);
-            this.rbPuntoAltoBajo.Name = "rbPuntoAltoBajo";
-            this.rbPuntoAltoBajo.Size = new System.Drawing.Size(186, 27);
-            this.rbPuntoAltoBajo.TabIndex = 1;
-            this.rbPuntoAltoBajo.Text = "Punto Alto, Punto Bajo";
-            this.rbPuntoAltoBajo.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Selecciona :";
-            // 
-            // gbMetodosValuacion
-            // 
-            this.gbMetodosValuacion.BackColor = System.Drawing.Color.Transparent;
-            this.gbMetodosValuacion.Controls.Add(this.rbIdentificacionEspecifica);
-            this.gbMetodosValuacion.Controls.Add(this.label4);
-            this.gbMetodosValuacion.Controls.Add(this.rbUEPS);
-            this.gbMetodosValuacion.Controls.Add(this.rbPEPS);
-            this.gbMetodosValuacion.Controls.Add(this.rbPromedioPonderado);
-            this.gbMetodosValuacion.Controls.Add(this.rbPromedioSimple);
-            this.gbMetodosValuacion.Controls.Add(this.label3);
-            this.gbMetodosValuacion.Font = new System.Drawing.Font("Sitka Heading", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.gbMetodosValuacion.Location = new System.Drawing.Point(547, 113);
-            this.gbMetodosValuacion.Name = "gbMetodosValuacion";
-            this.gbMetodosValuacion.Size = new System.Drawing.Size(447, 233);
-            this.gbMetodosValuacion.TabIndex = 3;
-            this.gbMetodosValuacion.TabStop = false;
-            this.gbMetodosValuacion.Text = "Métodos de Valuación";
-            // 
-            // rbIdentificacionEspecifica
-            // 
-            this.rbIdentificacionEspecifica.AutoSize = true;
-            this.rbIdentificacionEspecifica.Location = new System.Drawing.Point(126, 66);
-            this.rbIdentificacionEspecifica.Name = "rbIdentificacionEspecifica";
-            this.rbIdentificacionEspecifica.Size = new System.Drawing.Size(198, 27);
-            this.rbIdentificacionEspecifica.TabIndex = 7;
-            this.rbIdentificacionEspecifica.Text = "Identificación Específica";
-            this.rbIdentificacionEspecifica.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(92, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Sistema  Valuación Perpetuo";
-            // 
-            // rbUEPS
-            // 
-            this.rbUEPS.AutoSize = true;
-            this.rbUEPS.Location = new System.Drawing.Point(127, 181);
-            this.rbUEPS.Name = "rbUEPS";
-            this.rbUEPS.Size = new System.Drawing.Size(67, 27);
-            this.rbUEPS.TabIndex = 5;
-            this.rbUEPS.Text = "UEPS";
-            this.rbUEPS.UseVisualStyleBackColor = true;
-            // 
-            // rbPEPS
-            // 
-            this.rbPEPS.AutoSize = true;
-            this.rbPEPS.Location = new System.Drawing.Point(127, 153);
-            this.rbPEPS.Name = "rbPEPS";
-            this.rbPEPS.Size = new System.Drawing.Size(65, 27);
-            this.rbPEPS.TabIndex = 4;
-            this.rbPEPS.Text = "PEPS";
-            this.rbPEPS.UseVisualStyleBackColor = true;
-            // 
-            // rbPromedioPonderado
-            // 
-            this.rbPromedioPonderado.AutoSize = true;
-            this.rbPromedioPonderado.Location = new System.Drawing.Point(126, 124);
-            this.rbPromedioPonderado.Name = "rbPromedioPonderado";
-            this.rbPromedioPonderado.Size = new System.Drawing.Size(214, 27);
-            this.rbPromedioPonderado.TabIndex = 3;
-            this.rbPromedioPonderado.Text = "Costo Promedio Ponderado";
-            this.rbPromedioPonderado.UseVisualStyleBackColor = true;
-            // 
-            // rbPromedioSimple
-            // 
-            this.rbPromedioSimple.AutoSize = true;
-            this.rbPromedioSimple.Location = new System.Drawing.Point(126, 96);
-            this.rbPromedioSimple.Name = "rbPromedioSimple";
-            this.rbPromedioSimple.Size = new System.Drawing.Size(188, 27);
-            this.rbPromedioSimple.TabIndex = 2;
-            this.rbPromedioSimple.Text = "Costo Promedio Simple";
-            this.rbPromedioSimple.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Selecciona :";
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.BackColor = System.Drawing.Color.White;
-            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSiguiente.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.next;
-            this.btnSiguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSiguiente.Location = new System.Drawing.Point(412, 373);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(128, 37);
-            this.btnSiguiente.TabIndex = 4;
-            this.btnSiguiente.Text = "Next :D";
-            this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSiguiente.UseVisualStyleBackColor = false;
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
-            this.btnSiguiente.MouseEnter += new System.EventHandler(this.btnSiguiente_MouseEnter);
-            this.btnSiguiente.MouseLeave += new System.EventHandler(this.btnSiguiente_MouseLeave);
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label8.Location = new System.Drawing.Point(619, 400);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(286, 29);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Metodos de Segmentación";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1066, 589);
-            this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.gbMetodosValuacion);
-            this.Controls.Add(this.gbMetodosSegmentacion);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla_20221102_091213;
+            this.ClientSize = new System.Drawing.Size(1172, 658);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnUEPS);
+            this.Controls.Add(this.btnPEPS);
+            this.Controls.Add(this.btnPonderado);
+            this.Controls.Add(this.btnSimple);
+            this.Controls.Add(this.btnEspecifica);
+            this.Controls.Add(this.btnEstadistico);
+            this.Controls.Add(this.btnAltoBajo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrincipal";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbMetodosSegmentacion.ResumeLayout(false);
-            this.gbMetodosSegmentacion.PerformLayout();
-            this.gbMetodosValuacion.ResumeLayout(false);
-            this.gbMetodosValuacion.PerformLayout();
+            this.Text = "Metodos";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
+        private Button btnAltoBajo;
+        private Button btnEstadistico;
+        private Button btnSimple;
+        private Button btnEspecifica;
+        private Button btnPEPS;
+        private Button btnPonderado;
+        private Button btnUEPS;
+        private PictureBox pictureBox2;
+        private Label label5;
+        private Label label6;
+        private Label label7;
         private Label label1;
-        private GroupBox gbMetodosSegmentacion;
-        private RadioButton rbEstadistico;
-        private RadioButton rbPuntoAltoBajo;
-        private Label label2;
-        private GroupBox gbMetodosValuacion;
-        private Label label4;
-        private RadioButton rbUEPS;
-        private RadioButton rbPEPS;
-        private RadioButton rbPromedioPonderado;
-        private RadioButton rbPromedioSimple;
-        private Label label3;
-        private RadioButton rbIdentificacionEspecifica;
-        private Button btnSiguiente;
+        private Label label8;
     }
 }

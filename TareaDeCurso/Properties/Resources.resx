@@ -124,11 +124,11 @@
   <data name="cibt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cibt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="identificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\identificacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dinero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dinero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="teneduria-de-libros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\teneduria-de-libros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="regustrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\regustrar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +139,17 @@
   <data name="estadi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estadi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pepss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pepss.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="teneduria-de-libros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\teneduria-de-libros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="estadistica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estadistica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pepss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pepss.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fomn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fomn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +169,7 @@
   <data name="calculadora (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculadora (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="identificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\identificacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de pantalla_20221102_091213" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla_20221102_091213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -83,6 +83,16 @@ namespace pjContabilidadMetodosValuacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_20221102_091213 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla_20221102_091213", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ccpj {
             get {
                 object obj = ResourceManager.GetObject("ccpj", resourceCulture);
